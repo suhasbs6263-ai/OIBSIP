@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Browser Chat App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f8fb;
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+    }
+    .chat-container {
+      width: 400px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .chat-header {
+      font-size: 18px;
+      font-weight: bold;
+      color: #0b7285;
+      margin-bottom: 4px;
+    }
+    #messages {
+      height: 250px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 8px;
+      overflow-y: auto;
+      background: #f9fbfd;
+      font-size: 14px;
+    }
+    .message {
+      margin-bottom: 4px;
+    }
+    .message strong {
+      color: #0b7285;
+    }
+    .input-row {
+      display: flex;
+      gap: 6px;
+    }
+    input[type="text"] {
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      flex: 1;
+      font-size: 14px;
+    }
+    #username {
+      width: 120px;
+    }
+    button {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      background: #0b7285;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #0a5c6b;
+    }
+    .footer {
+      font-size: 11px;
+      color: #666;
+      text-align: center;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">Browser-Based Chat Application</div>
+
+    <div class="input-row">
+      <input id="username" type="text" placeholder="Your name" />
+    </div>
+
+    <div id="messages"></div>
+
+    <div class="input-row">
+      <input id="messageInput" type="text" placeholder="Type a message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+
+    <div class="footer">Built with Python (Flask + Socket.IO)</div>
+  </div>
+
+  <!-- Socket.IO client from CDN -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script>
+    const socket = io();  // connects to same host:port as Flask server
+
+    const usernameInput = document.getElementById("username");
+    const messageInput = document.getElementById("messageInput");
+    const sendBtn = document.getElementById("sendBtn");
+    const messagesDiv = document.getElementById("messages");
+
+    // Receive messages from server
+    socket.on("chat_message", (data) => {
+      const msgEl = document.createElement("div");
+      msgEl.classList.add("message");
+      msgEl.innerHTML = `<strong>${data.username}</strong>: ${data.message}`;
+      messagesDiv.appendChild(msgEl);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight; // auto scroll
+    });
+
+    // Send message
+    function sendMessage() {
+      const username = usernameInput.value.trim() || "Anonymous";
+      const message = messageInput.value.trim();
+      if (!message) return;
+
+      socket.emit("chat_message", {
+        username: username,
+        message: message
+      });
+
+      messageInput.value = "";
+      messageInput.focus();
+    }
+
+    sendBtn.addEventListener("click", sendMessage);
+
+    messageInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        sendMessage();
+      }
+    });
+  </script>
+</body>
+</html>
