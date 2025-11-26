@@ -52,7 +52,7 @@ Built as part of my **OIBSIP Internship — Python Development**.
 
 <img src="fec6b170-1d1a-43ee-b2c8-f6a7cf9f8261.jpeg" width="500" />
 
-<img src="BMI_Calculator/9f943074-dda9-40aa-b970-dd7334691034.jpeg" width="300" />
+<img src="9f943074-dda9-40aa-b970-dd7334691034.jpeg" width="300" />
 <img src="1a97081-0ef9-4afa-ba54-01bd7137896c.jpeg" width="300" />
 
 ---
