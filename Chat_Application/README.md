@@ -29,7 +29,7 @@ This project is part of the **OIBSIP Internship (Python Development)**.
 <img src="IMG_2396.jpeg" width="500" />
 
 <img src="IMG_2395.jpeg" width="300" />
-<img src="1a9d7081-0ef9-4afa-ba54-018d7137896c.jpeg" width="300" />
+<img src="IMG_2397.jpeg" />
 
 ## ▶️ How to Run
 
