@@ -26,7 +26,7 @@ This project is part of the **OIBSIP Internship (Python Development)**.
 ---
 ## 📸 Screenshots
 
-<img src="fec6b170-1d1a-43ee-b2c8-f6a7cf9f8261.jpeg" width="500" />
+<img src="IMG_2396.jpeg" width="500" />
 
 <img src="9f943074-dda9-40aa-b970-dd7334691034.jpeg" width="300" />
 <img src="1a9d7081-0ef9-4afa-ba54-018d7137896c.jpeg" width="300" />
