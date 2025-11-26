@@ -50,10 +50,10 @@ Built as part of my **OIBSIP Internship — Python Development**.
 
 ## 📸 Screenshots
 
-<img src="filename-1.jpeg" width="500" />
+<img src="fec6b170-1d1a-43ee-b2c8-f6a7cf9f8261.jpeg" width="500" />
 
-<img src="filename-2.jpeg" width="350" />
-<img src="filename-3.jpeg" width="350" />
+<img src="9f946307-dad9-40aa-b970-dd7334691034.jpeg" width="300" />
+<img src="1a97081-0ef9-4afa-ba54-01bd7137896c.jpeg" width="300" />
 
 ---
 
