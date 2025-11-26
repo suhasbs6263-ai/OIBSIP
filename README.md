@@ -12,7 +12,7 @@ This project is built using **Python (Tkinter GUI)** for generating strong and h
 ---
 
 ### 📸 Screenshots
-<img src="IMG_2396.jpeg" width="500" />
+<img src="IMG_2398.jpeg" width="500" />
 
 <img src="IMG_2395.jpeg" width="300" />
 <img src="IMG_2397.jpeg" />
