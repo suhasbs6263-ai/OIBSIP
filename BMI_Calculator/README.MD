@@ -46,7 +46,6 @@ Built as part of my **OIBSIP Internship — Python Development**.
 
 ---
 
-## 🖼️ Screenshot
 
 ## 📸 Screenshots
 
